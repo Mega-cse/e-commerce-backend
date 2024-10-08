@@ -18,6 +18,9 @@ app.use(cookieParser());
 app.use('/api/user',userRoutes)
 app.use('/api/product',productRoutes)
 app.use('/api/orders', orderRoutes);
+app.get('/', (req, res) => {
+  res.send(`<h1>Welcome to E-Commerce Backend</h1>`);
+});
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 })
